@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="file.css">
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC" rel="stylesheet"> 
+    <title>Fruit Basket</title>
+    <script src='./jquery-3.3.1.js'></script>
+</head>
+<body>
+    <div id="main">
+        <div id="menu">
+            <div class="start_end_menu" id='start_menu'>
+                <p unselectable="on"><i>Fruit Basket</i></p>
+                <p style="padding:20px;"></p>
+                <p class='play_but' unselectable="on">START</p>
+            </div>
+
+            <div id='during_play_menu' style="display:none;">
+                <p id='score'>Score : 0</p>
+                <div id='health_main'>
+                    <p>Health :</p>
+                    <div id='health_box'>
+                        <div></div>
+                        <div id='health_change'></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="start_end_menu" id='game_over_menu' style="display:none;">
+                <p unselectable="on">Game Over</p>
+                <p id='end_score' unselectable="on">Score : 300</p>
+                <p class='play_but' unselectable="on">AGAIN</p>
+            </div>
+
+        </div>
+        <div id='blur_bg'></div>
+        <div id="inner">
+            <div class="other_img" style="top: 257px;"><img src="./assets/imgs/poco.gif" alt="" srcset="" width="130"></div>
+            <div class="drop" style="left:100px"><img src="assets/imgs/orange.png" alt="test" width='50'></div>
+            <div id="basket" style="display:none;"><img src="assets/imgs/basket.png" alt='basket' width='150'></div>
+            <div id="boundary"></div>
+        </div>
+    </div>
+    <script src="file.js"></script>
+</body>
+</html>

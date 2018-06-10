@@ -12,12 +12,12 @@
 <body>
     <div id="main">
         <div id="menu">
-            <div class="start_end_menu" id='start_menu'>
-                <p unselectable="on"><i>Fruit Basket</i></p>
+            <div class="start_end_menu" id='start_menu' style="display:none;opacity:0;">
+                <p ><i>Fruit Basket</i></p>
                 <p style="padding:20px;"></p>
-                <p class='play_but' unselectable="on">START</p>
+                <p class='play_but button' >Start</p>
+                <a class='under_but button' href="about_page.html" style="text-decoration: none;">About</a>
             </div>
-
             <div id='during_play_menu' style="display:none;">
                 <p id='score'>Score : 0</p>
                 <div id='health_main'>
@@ -30,18 +30,18 @@
             </div>
 
             <div class="start_end_menu" id='game_over_menu' style="display:none;">
-                <p unselectable="on">Game Over</p>
-                <p id='end_score' unselectable="on">Score : 300</p>
-                <p class='play_but' unselectable="on">AGAIN</p>
+                <p >Game Over</p>
+                <p id='end_score' >Score : 300</p>
+                <p class='play_but button' >AGAIN</p>
+                <p class='under_but button' id="to_menu" >MENU</p>
             </div>
 
         </div>
         <div id='blur_bg'></div>
         <div id="inner">
-            <div class="other_img" style="top: 257px;"><img src="./assets/imgs/poco.gif" alt="" srcset="" width="130"></div>
-            <div class="drop" style="left:100px"><img src="assets/imgs/orange.png" alt="test" width='50'></div>
+            <div class="other_img" style="top: 257px;left:200px;"><img src="./assets/imgs/poco.gif" alt="" srcset="" width="130"></div>
             <div id="basket" style="display:none;"><img src="assets/imgs/basket.png" alt='basket' width='150'></div>
-            <div id="boundary"></div>
+            <div id="boundary" style="text-align: center;font-weight: 900;border:1px solid black;">boundary</div>
         </div>
     </div>
     <script src="file.js"></script>

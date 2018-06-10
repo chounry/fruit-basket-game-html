@@ -1,5 +1,14 @@
 body{min-height: 700px;background: #E1E1E1;}
 
+.changeOpacityOver{
+    animation: changeOpacity 1.5s linear;
+    animation-fill-mode: forwards;
+}
+.changeOpacityStart{
+    animation: changeOpacity 0.4s linear;
+    animation-fill-mode: forwards;
+}
+
 #main{
     background-image: url('assets/imgs/background.jpg');
     background-position: center;
@@ -16,36 +25,29 @@ body{min-height: 700px;background: #E1E1E1;}
 }
 
 #menu{
+    font-family: 'Patrick Hand SC';
     -moz-user-select: none;
     height: 100%;
     position: absolute;
     width: 100%;
     z-index: 2;
     user-select: none;
+    opacity: 0;
+    animation: changeOpacity 0.3s linear;
+    animation-fill-mode: forwards;
 }
 /*<<<-------------- CSS for game start */
-.start_end_menu{padding:100px;font-family: 'Segoe UI';}
+.start_end_menu{padding:73px;}
+.about_end_menu{padding:50px;font-family: 'Segoe UI'}
 
-.play_but{transition: 0.3s linear;}
-.play_but:active{transform: translateY(2px);}
-.start_end_menu p:first-child{
-    font-size: 70px;
-    font-family: 'Patrick Hand SC', cursive;
-    font-weight: 900;
-    color: white;
-    text-shadow: -1px 3px 5px #060606;
-    text-align: center;
-    cursor: default;
-    margin-bottom:0;
-}
-.start_end_menu p:last-child{
+.button{ /* for button & about display table */
     width: 177px;
     text-align: center;
     height: 60px;
-    font-size: 22px;
+    font-size: 26px;
     color: #1F8A70;    
-    font-weight: 900;
-    line-height: 2.5;
+    font-weight:bold;
+    line-height: 2.2;
     background: #FFE11A;
     border-radius: 50px;
     margin: auto;
@@ -56,8 +58,53 @@ body{min-height: 700px;background: #E1E1E1;}
     text-shadow: -1px 3px 5px #0606064d;
     transition: 0.1s linear;
 }
-.start_end_menu p:last-child:hover{
+.button:hover{
     box-shadow: 0px 0px 70px -8px rgba(0,0,0,0.98);
+}
+/* start_menu{padding:1px;opacity: 0;} */
+.play_but{transition: 0.3s linear;}
+
+.under_but{transition: 0.3s linear;display: inherit;margin-top: 45px !important;}
+
+.play_but , .under_but:active{transform: translateY(2px);}
+.start_end_menu p:first-child, .about_menu p:first-child{
+    font-size: 70px;
+    font-weight: 900;
+    color: white;
+    text-shadow: -1px 3px 5px #060606;
+    text-align: center;
+    cursor: default;
+    margin-bottom:0;
+}
+
+.about div{
+    text-align: center;
+    font-family: 'Patrick Hand SC', cursive;
+    width:400px;
+    cursor: default ;
+    height: 200px;
+    font-size: 22px;
+    color: #1F8A70;    
+    font-weight: 900;
+    line-height: 2;
+    background: #FFE11A;
+    border-radius: 40px;
+    margin: auto;
+    -webkit-box-shadow: 0px 0px 37px -8px rgba(0,0,0,0.98);
+    -moz-box-shadow: 0px 0px 37px -8px rgba(0,0,0,0.98);
+    box-shadow: 0px 0px 37px -8px rgba(0,0,0,0.98);
+    text-shadow: -1px 3px 5px #0606064d;
+    transition: 0.1s linear;
+}
+.about div p{
+    text-decoration: underline;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+.back{
+    display: inherit;
+    margin-left: 50px;
+    width: 105px;
 }
 
 /* CSS for game start ----------->>>> */
@@ -97,15 +144,6 @@ body{min-height: 700px;background: #E1E1E1;}
 /*<<<---------- CSS form game over */
 #game_over_menu{opacity: 0;}
 
-.changeOpacity{
-    animation: changeOpacity 1.5s linear;
-    animation-fill-mode: forwards;
-}
-
-@keyframes changeOpacity{
-    form{opacity: 0;}
-    to {opacity: 1;}
-}
 #game_over_menu p:first-child{
     font-family: 'Segoe UI';
     color:#FD7400;
@@ -137,8 +175,9 @@ body{min-height: 700px;background: #E1E1E1;}
 #inner{
     height: 600px;
     top: -50px;
+    left:-200px;
     position: absolute;
-    width: 800px;
+    width: 1000px;
 }
 
 .other_img{
@@ -152,3 +191,7 @@ body{min-height: 700px;background: #E1E1E1;}
     bottom:-50px;
 }
 
+@keyframes changeOpacity{
+    form{opacity: 0;}
+    to {opacity: 1;}
+}

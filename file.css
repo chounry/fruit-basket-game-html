@@ -37,9 +37,9 @@ body{min-height: 700px;background: #E1E1E1;}
     animation-fill-mode: forwards;
 }
 /*<<<-------------- CSS for game start */
-.start_end_menu{padding:73px;}
 .about_end_menu{padding:50px;font-family: 'Segoe UI'}
 
+/* #start_menu{padding:0;} */
 .button{ /* for button & about display table */
     width: 177px;
     text-align: center;

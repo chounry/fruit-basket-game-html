@@ -210,7 +210,7 @@ window.onload = function(){
         renderHealth(health);
     }
     function renderHealth(value){document.getElementById('health_change').style.width = value+'%';        }
-    function addScore(value){
+    function addScore(){
         score++;
         renderScore(score);
     }
